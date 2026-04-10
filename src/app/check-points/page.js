@@ -1,14 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function CheckPointsPage() {
+  const searchParams = useSearchParams();
   const [mobile, setMobile] = useState("");
   const [result, setResult] = useState(null);
   const [status, setStatus] = useState("");
+  const [redeemPoints, setRedeemPoints] = useState("");
+  const [redeemStatus, setRedeemStatus] = useState("");
+
+  useEffect(() => {
+    const queryMobile = searchParams.get("mobile");
+    if (queryMobile) {
+      setMobile(queryMobile);
+    }
+  }, [searchParams]);
 
   async function handleCheck(event) {
-    event.preventDefault();
+    event?.preventDefault?.();
     setStatus("Fetching wallet...");
 
     const response = await fetch(`/api/wallet/${mobile}`);
@@ -22,6 +33,31 @@ export default function CheckPointsPage() {
 
     setResult(data);
     setStatus("Wallet found.");
+  }
+
+  async function handleRedeem(event) {
+    event.preventDefault();
+    setRedeemStatus("Redeeming points...");
+
+    const response = await fetch("/api/wallet/redeem", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        mobile,
+        points: Number(redeemPoints)
+      })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      setRedeemStatus(data.error || "Could not redeem points.");
+      return;
+    }
+
+    setRedeemStatus(`Redeemed successfully. Remaining points: ${data.wallet.remainingPoints}`);
+    setRedeemPoints("");
+    await handleCheck();
   }
 
   return (
@@ -62,13 +98,31 @@ export default function CheckPointsPage() {
                 <strong>{result.wallet.remainingPoints}</strong>
               </div>
             </div>
+
+            <form className="form-grid redeem-form" onSubmit={handleRedeem}>
+              <h3>Redeem Points</h3>
+              <input
+                type="number"
+                min="1"
+                max={result.wallet.remainingPoints}
+                placeholder="Enter points to redeem"
+                value={redeemPoints}
+                onChange={(event) => setRedeemPoints(event.target.value)}
+                required
+              />
+              <button type="submit">Redeem Now</button>
+              {redeemStatus ? <p className="status">{redeemStatus}</p> : null}
+            </form>
           </article>
 
           <article className="card">
             <h2>Purchase History</h2>
             <div className="list">
               {result.purchases.map((purchase) => (
-                <div key={purchase._id} className="list-row">
+                <div
+                  key={purchase._id || purchase.id || `${purchase.invoiceNumber}-${purchase.purchaseDate}`}
+                  className="list-row"
+                >
                   <div>
                     <strong>{purchase.mobileModel}</strong>
                     <span>{purchase.invoiceNumber}</span>
@@ -86,4 +140,3 @@ export default function CheckPointsPage() {
     </div>
   );
 }
-

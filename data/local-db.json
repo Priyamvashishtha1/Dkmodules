@@ -1,6 +1,26 @@
 {
   "customers": [
     {
+      "id": "customer_54eec697-1cc7-46c9-a17d-8b0087202d42",
+      "name": "Priyam Vashishtha",
+      "age": 25,
+      "city": "Ashoknagar",
+      "mobile": "07000361710",
+      "dob": null,
+      "createdAt": "2026-04-10T13:21:50.794Z",
+      "updatedAt": "2026-04-10T13:21:50.794Z"
+    },
+    {
+      "id": "customer_a27e18d6-29d8-4d14-a1d0-ebe0daba434f",
+      "name": "Retry Test",
+      "age": 29,
+      "city": "Bhopal",
+      "mobile": "9998887774",
+      "dob": null,
+      "createdAt": "2026-04-10T13:20:49.079Z",
+      "updatedAt": "2026-04-10T13:20:49.079Z"
+    },
+    {
       "id": "customer_7f150cfa-968a-4891-a4d4-ab9a7dc450b8",
       "name": "Rakesh",
       "age": 25,
@@ -58,9 +78,49 @@
       "remainingPoints": 500,
       "createdAt": "2026-04-10T11:17:48.525Z",
       "updatedAt": "2026-04-10T11:17:48.524Z"
+    },
+    {
+      "id": "wallet_39f59374-26bc-4e64-b6d9-9c10c4e176a6",
+      "customerId": "customer_a27e18d6-29d8-4d14-a1d0-ebe0daba434f",
+      "totalPoints": 150,
+      "redeemedPoints": 0,
+      "remainingPoints": 150,
+      "createdAt": "2026-04-10T13:20:49.081Z",
+      "updatedAt": "2026-04-10T13:20:49.079Z"
+    },
+    {
+      "id": "wallet_95537cb0-c1bd-4c97-8984-d5048f7959bd",
+      "customerId": "customer_54eec697-1cc7-46c9-a17d-8b0087202d42",
+      "totalPoints": 500,
+      "redeemedPoints": 500,
+      "remainingPoints": 0,
+      "createdAt": "2026-04-10T13:21:50.794Z",
+      "updatedAt": "2026-04-10T13:22:33.711Z"
     }
   ],
   "purchases": [
+    {
+      "id": "purchase_73f0b256-2d56-4c3f-b4d2-04420b4e41c2",
+      "customerId": "customer_54eec697-1cc7-46c9-a17d-8b0087202d42",
+      "mobileModel": "S25",
+      "price": 50000,
+      "pointsEarned": 500,
+      "invoiceNumber": "005",
+      "purchaseDate": "2005-02-17",
+      "createdAt": "2026-04-10T13:21:50.794Z",
+      "updatedAt": "2026-04-10T13:21:50.794Z"
+    },
+    {
+      "id": "purchase_7afc0ef2-f389-40c9-bcd0-866bbeadacf5",
+      "customerId": "customer_a27e18d6-29d8-4d14-a1d0-ebe0daba434f",
+      "mobileModel": "Moto G",
+      "price": 15000,
+      "pointsEarned": 150,
+      "invoiceNumber": "ATLAS3001",
+      "purchaseDate": "2026-04-10",
+      "createdAt": "2026-04-10T13:20:49.079Z",
+      "updatedAt": "2026-04-10T13:20:49.079Z"
+    },
     {
       "id": "purchase_eb7c8143-345b-409c-97a5-2ff19d695bf9",
       "customerId": "customer_7f150cfa-968a-4891-a4d4-ab9a7dc450b8",

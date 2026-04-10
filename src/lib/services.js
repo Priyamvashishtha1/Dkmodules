@@ -1,5 +1,6 @@
 import {
   connectToDatabase,
+  isDatabaseAuthError,
   isDatabaseConfigured,
   isDatabaseUnavailableError
 } from "@/lib/db";
@@ -378,8 +379,8 @@ export async function registerCustomer(payload) {
   try {
     await connectToDatabase();
   } catch (error) {
-    if (isDatabaseUnavailableError(error)) {
-      throw new Error("MongoDB is not running. Start MongoDB locally or add a MongoDB Atlas URI in .env.");
+    if (isDatabaseUnavailableError(error) || isDatabaseAuthError(error)) {
+      return registerCustomerLocally(payload);
     }
     throw error;
   }
@@ -451,8 +452,8 @@ export async function recordPurchase(payload) {
   try {
     await connectToDatabase();
   } catch (error) {
-    if (isDatabaseUnavailableError(error)) {
-      throw new Error("MongoDB is not running. Start MongoDB locally or add a MongoDB Atlas URI in .env.");
+    if (isDatabaseUnavailableError(error) || isDatabaseAuthError(error)) {
+      return recordPurchaseLocally(payload);
     }
     throw error;
   }
@@ -498,8 +499,8 @@ export async function redeemCustomerPoints(payload) {
   try {
     await connectToDatabase();
   } catch (error) {
-    if (isDatabaseUnavailableError(error)) {
-      throw new Error("MongoDB is not running. Start MongoDB locally or add a MongoDB Atlas URI in .env.");
+    if (isDatabaseUnavailableError(error) || isDatabaseAuthError(error)) {
+      return redeemCustomerPointsLocally(payload);
     }
     throw error;
   }
@@ -540,8 +541,8 @@ export async function getWalletByMobile(mobile) {
   try {
     await connectToDatabase();
   } catch (error) {
-    if (isDatabaseUnavailableError(error)) {
-      return null;
+    if (isDatabaseUnavailableError(error) || isDatabaseAuthError(error)) {
+      return getWalletByMobileLocally(mobile);
     }
     throw error;
   }
@@ -571,8 +572,8 @@ export async function createOffer(payload) {
   try {
     await connectToDatabase();
   } catch (error) {
-    if (isDatabaseUnavailableError(error)) {
-      throw new Error("MongoDB is not running. Start MongoDB locally or add a MongoDB Atlas URI in .env.");
+    if (isDatabaseUnavailableError(error) || isDatabaseAuthError(error)) {
+      return createOfferLocally(payload);
     }
     throw error;
   }
@@ -595,8 +596,8 @@ export async function listOffers() {
     await connectToDatabase();
     return Offer.find().sort({ createdAt: -1 }).lean();
   } catch (error) {
-    if (isDatabaseUnavailableError(error)) {
-      return [];
+    if (isDatabaseUnavailableError(error) || isDatabaseAuthError(error)) {
+      return listOffersLocally();
     }
     throw error;
   }
@@ -610,8 +611,8 @@ export async function listCustomers() {
   try {
     await connectToDatabase();
   } catch (error) {
-    if (isDatabaseUnavailableError(error)) {
-      return [];
+    if (isDatabaseUnavailableError(error) || isDatabaseAuthError(error)) {
+      return listCustomersLocally();
     }
     throw error;
   }
@@ -639,8 +640,8 @@ export async function listPurchases() {
     await connectToDatabase();
     return Purchase.find().populate("customerId").sort({ purchaseDate: -1 }).lean();
   } catch (error) {
-    if (isDatabaseUnavailableError(error)) {
-      return [];
+    if (isDatabaseUnavailableError(error) || isDatabaseAuthError(error)) {
+      return listPurchasesLocally();
     }
     throw error;
   }
@@ -654,8 +655,8 @@ export async function sendOfferCampaign(message) {
   try {
     await connectToDatabase();
   } catch (error) {
-    if (isDatabaseUnavailableError(error)) {
-      throw new Error("MongoDB is not running. Start MongoDB locally or add a MongoDB Atlas URI in .env.");
+    if (isDatabaseUnavailableError(error) || isDatabaseAuthError(error)) {
+      return sendOfferCampaignLocally(message);
     }
     throw error;
   }
@@ -696,7 +697,7 @@ export async function loginAdmin(email, password) {
   try {
     await connectToDatabase();
   } catch (error) {
-    if (isDatabaseUnavailableError(error)) {
+    if (isDatabaseUnavailableError(error) || isDatabaseAuthError(error)) {
       if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
         const admin = {
           id: "env-admin",
@@ -741,16 +742,8 @@ export async function getDashboardStats() {
   try {
     await connectToDatabase();
   } catch (error) {
-    if (isDatabaseUnavailableError(error)) {
-      return {
-        customerCount: 0,
-        purchaseCount: 0,
-        totalPoints: 0,
-        redeemedPoints: 0,
-        remainingPoints: 0,
-        totalSales: 0,
-        repeatCustomers: 0
-      };
+    if (isDatabaseUnavailableError(error) || isDatabaseAuthError(error)) {
+      return getDashboardStatsLocally();
     }
     throw error;
   }

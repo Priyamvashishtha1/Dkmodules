@@ -1,31 +1,43 @@
-⚠ Port 3000 is in use by process 20700, using available port 3001 instead.
-⚠ Slow filesystem detected. The benchmark took 730ms. If F:\Dk Modules\.next/dev is a network drive, consider moving it to a local folder.
+⚠ Port 3000 is in use by process 17696, using available port 3001 instead.
+⚠ Slow filesystem detected. The benchmark took 587ms. If F:\Dk Modules\.next/dev is a network drive, consider moving it to a local folder.
 See more: https://nextjs.org/docs/app/guides/local-development
-Error: read ECONNRESET
-    at ignore-listed frames {
-  errno: -4077,
-  code: 'ECONNRESET',
-  syscall: 'read'
+Twilio credentials are missing. WhatsApp send skipped. {
+  to: '9998887774',
+  message: 'Welcome to DK Enterprises Rewards, Retry Test!\n' +
+    'You earned 150 points on your purchase.\n' +
+    'Total points: 150'
 }
-⚠ Blocked cross-origin request to Next.js dev resource /_next/webpack-hmr from "192.168.29.23".
-Cross-origin access to Next.js dev resources is blocked by default for safety.
-
-To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
-
-// next.config.js
-module.exports = {
-  allowedDevOrigins: ['192.168.29.23'],
+Twilio credentials are missing. WhatsApp send skipped. {
+  to: '07000361710',
+  message: 'Welcome to DK Enterprises Rewards, Priyam Vashishtha!\n' +
+    'You earned 500 points on your purchase.\n' +
+    'Total points: 500'
 }
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] Each child in a list should have a unique "key" prop.
 
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-⚠ Blocked cross-origin request to Next.js dev resource /__nextjs_font/geist-latin.woff2 from "192.168.29.23".
-Cross-origin access to Next.js dev resources is blocked by default for safety.
-
-To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
-
-// next.config.js
-module.exports = {
-  allowedDevOrigins: ['192.168.29.23'],
+Check the render method of `CheckPointsPage`. See https://react.dev/link/warning-keys for more information. 
+    at <unknown> (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15127:29)
+    at runWithFiberInDEV (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at warnForMissingKey (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15126:17)
+    at warnOnInvalidKey (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4091:21)
+    at reconcileChildrenArray (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4129:160)
+    at reconcileChildFibersImpl (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4236:51)
+    at <unknown> (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4261:39)
+    at reconcileChildren (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:5898:51)
+    at beginWork (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6758:1573)
+    at runWithFiberInDEV (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopSync (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9449:40)
+    at renderRootSync (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9433:13)
+    at performWorkOnRoot (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:186)
+    at performWorkOnRootViaSchedulerTask (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15127:29)
+Twilio credentials are missing. WhatsApp send skipped. {
+  to: '07000361710',
+  message: 'You redeemed 500 points successfully.\nRemaining points: 0'
 }
-
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+Twilio credentials are missing. WhatsApp send skipped. {
+  to: '07000361710',
+  message: 'You redeemed 500 points successfully.\nRemaining points: 0'
+}

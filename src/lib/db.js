@@ -44,3 +44,13 @@ export function isDatabaseUnavailableError(error) {
     message.includes("connect ECONNREFUSED")
   );
 }
+
+export function isDatabaseAuthError(error) {
+  const message = String(error?.message || "");
+
+  return (
+    message.includes("Authentication failed") ||
+    message.includes("bad auth") ||
+    message.includes("auth failed")
+  );
+}

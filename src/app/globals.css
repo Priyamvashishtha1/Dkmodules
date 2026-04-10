@@ -375,7 +375,74 @@ button {
 
 .popup-actions {
   display: flex;
+  gap: 0.75rem;
   justify-content: flex-end;
+}
+
+.redeem-form {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.redeem-form h3 {
+  margin: 0;
+}
+
+.qr-extra-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.print-page {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 4rem;
+}
+
+.print-poster {
+  width: min(100%, 780px);
+  text-align: center;
+  border-radius: 36px;
+  padding: 2rem;
+  background:
+    linear-gradient(160deg, rgba(255, 249, 239, 0.98), rgba(255, 232, 197, 0.94));
+  border: 1px solid rgba(82, 44, 18, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.print-poster h1 {
+  margin: 0.5rem 0 0.75rem;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 0.95;
+}
+
+.print-lead {
+  max-width: 36rem;
+  margin: 0 auto 1.5rem;
+  color: var(--muted);
+}
+
+.print-qr-frame {
+  display: flex;
+  justify-content: center;
+  padding: 1.2rem;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.72);
+  margin-bottom: 1.25rem;
+}
+
+.print-qr-frame img {
+  width: min(100%, 420px);
+  height: auto;
+  display: block;
+}
+
+.print-benefits {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
 }
 
 .stats-grid strong,
@@ -424,10 +491,13 @@ button {
   }
 
   .popup-actions {
+    flex-direction: column;
     justify-content: stretch;
   }
 
-  .popup-actions button {
+  .popup-actions button,
+  .popup-actions a {
     width: 100%;
+    text-align: center;
   }
 }

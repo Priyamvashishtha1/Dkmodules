@@ -72,6 +72,11 @@ export default function HomePage() {
 
       <section className="card">
         <QrCard />
+        <div className="qr-extra-actions">
+          <Link href="/print-qr" className="ghost-link">
+            Open Printable QR Card
+          </Link>
+        </div>
       </section>
     </div>
   );

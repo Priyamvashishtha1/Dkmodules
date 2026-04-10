@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const initialForm = {
@@ -165,6 +166,12 @@ export default function RewardsPage() {
             </div>
 
             <div className="popup-actions">
+              <Link
+                href={`/check-points?mobile=${encodeURIComponent(successCard.mobile)}`}
+                className="ghost-link"
+              >
+                Check Rewards
+              </Link>
               <button type="button" onClick={() => setSuccessCard(null)}>
                 Close
               </button>
