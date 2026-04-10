@@ -1,0 +1,31 @@
+⚠ Port 3000 is in use by process 20700, using available port 3001 instead.
+⚠ Slow filesystem detected. The benchmark took 730ms. If F:\Dk Modules\.next/dev is a network drive, consider moving it to a local folder.
+See more: https://nextjs.org/docs/app/guides/local-development
+Error: read ECONNRESET
+    at ignore-listed frames {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+⚠ Blocked cross-origin request to Next.js dev resource /_next/webpack-hmr from "192.168.29.23".
+Cross-origin access to Next.js dev resources is blocked by default for safety.
+
+To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
+
+// next.config.js
+module.exports = {
+  allowedDevOrigins: ['192.168.29.23'],
+}
+
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+⚠ Blocked cross-origin request to Next.js dev resource /__nextjs_font/geist-latin.woff2 from "192.168.29.23".
+Cross-origin access to Next.js dev resources is blocked by default for safety.
+
+To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
+
+// next.config.js
+module.exports = {
+  allowedDevOrigins: ['192.168.29.23'],
+}
+
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins

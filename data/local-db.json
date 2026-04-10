@@ -1,0 +1,99 @@
+{
+  "customers": [
+    {
+      "id": "customer_7f150cfa-968a-4891-a4d4-ab9a7dc450b8",
+      "name": "Rakesh",
+      "age": 25,
+      "city": "vidisha",
+      "mobile": "70003654489",
+      "dob": null,
+      "createdAt": "2026-04-10T11:17:48.524Z",
+      "updatedAt": "2026-04-10T11:17:48.524Z"
+    },
+    {
+      "id": "customer_9977dac9-0766-4d3d-b635-a20f0b6c29fb",
+      "name": "Priyam Vashishtha",
+      "age": 25,
+      "city": "askn",
+      "mobile": "7000361710",
+      "dob": null,
+      "createdAt": "2026-04-10T11:09:51.574Z",
+      "updatedAt": "2026-04-10T11:09:51.574Z"
+    },
+    {
+      "id": "customer_350dcb6a-ecb5-459b-8eda-345f4e633d5a",
+      "name": "Rahul",
+      "age": 28,
+      "city": "Bhopal",
+      "mobile": "9876543210",
+      "dob": null,
+      "createdAt": "2026-04-10T11:01:58.119Z",
+      "updatedAt": "2026-04-10T11:01:58.119Z"
+    }
+  ],
+  "wallets": [
+    {
+      "id": "wallet_3bc1c8cd-d178-498e-9c95-df0547af324e",
+      "customerId": "customer_350dcb6a-ecb5-459b-8eda-345f4e633d5a",
+      "totalPoints": 850,
+      "redeemedPoints": 0,
+      "remainingPoints": 850,
+      "createdAt": "2026-04-10T11:01:58.121Z",
+      "updatedAt": "2026-04-10T11:01:58.119Z"
+    },
+    {
+      "id": "wallet_89fba514-3034-41d7-9d65-01c7767a6b51",
+      "customerId": "customer_9977dac9-0766-4d3d-b635-a20f0b6c29fb",
+      "totalPoints": 250,
+      "redeemedPoints": 0,
+      "remainingPoints": 250,
+      "createdAt": "2026-04-10T11:09:51.574Z",
+      "updatedAt": "2026-04-10T11:09:51.574Z"
+    },
+    {
+      "id": "wallet_1e54e881-3aa6-4813-92eb-e44be9198f51",
+      "customerId": "customer_7f150cfa-968a-4891-a4d4-ab9a7dc450b8",
+      "totalPoints": 500,
+      "redeemedPoints": 0,
+      "remainingPoints": 500,
+      "createdAt": "2026-04-10T11:17:48.525Z",
+      "updatedAt": "2026-04-10T11:17:48.524Z"
+    }
+  ],
+  "purchases": [
+    {
+      "id": "purchase_eb7c8143-345b-409c-97a5-2ff19d695bf9",
+      "customerId": "customer_7f150cfa-968a-4891-a4d4-ab9a7dc450b8",
+      "mobileModel": "Oppo",
+      "price": 50000,
+      "pointsEarned": 500,
+      "invoiceNumber": "530",
+      "purchaseDate": "2000-12-25",
+      "createdAt": "2026-04-10T11:17:48.524Z",
+      "updatedAt": "2026-04-10T11:17:48.524Z"
+    },
+    {
+      "id": "purchase_ad2fc608-fa9c-450b-b3a5-779baa33aacf",
+      "customerId": "customer_9977dac9-0766-4d3d-b635-a20f0b6c29fb",
+      "mobileModel": "vivo x300 pro",
+      "price": 25000,
+      "pointsEarned": 250,
+      "invoiceNumber": "001",
+      "purchaseDate": "2000-04-17",
+      "createdAt": "2026-04-10T11:09:51.574Z",
+      "updatedAt": "2026-04-10T11:09:51.574Z"
+    },
+    {
+      "id": "purchase_b45a8154-0d4d-4189-be76-543cd657f796",
+      "customerId": "customer_350dcb6a-ecb5-459b-8eda-345f4e633d5a",
+      "mobileModel": "Samsung S24",
+      "price": 85000,
+      "pointsEarned": 850,
+      "invoiceNumber": "INV1001",
+      "purchaseDate": "2026-04-10",
+      "createdAt": "2026-04-10T11:01:58.119Z",
+      "updatedAt": "2026-04-10T11:01:58.119Z"
+    }
+  ],
+  "offers": []
+}
