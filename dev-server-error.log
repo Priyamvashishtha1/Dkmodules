@@ -1,11 +1,11 @@
-⚠ Port 3000 is in use by process 17696, using available port 3001 instead.
-⚠ Slow filesystem detected. The benchmark took 587ms. If F:\Dk Modules\.next/dev is a network drive, consider moving it to a local folder.
+⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
+⚠ Slow filesystem detected. The benchmark took 419ms. If F:\Dk Modules\.next/dev is a network drive, consider moving it to a local folder.
 See more: https://nextjs.org/docs/app/guides/local-development
 Twilio credentials are missing. WhatsApp send skipped. {
-  to: '9998887774',
-  message: 'Welcome to DK Enterprises Rewards, Retry Test!\n' +
-    'You earned 150 points on your purchase.\n' +
-    'Total points: 150'
+  to: '9998887773',
+  message: 'Welcome to DK Enterprises Rewards, Atlas Final!\n' +
+    'You earned 270 points on your purchase.\n' +
+    'Total points: 270'
 }
 Twilio credentials are missing. WhatsApp send skipped. {
   to: '07000361710',
@@ -14,30 +14,79 @@ Twilio credentials are missing. WhatsApp send skipped. {
     'Total points: 500'
 }
 [browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
-[browser] Each child in a list should have a unique "key" prop.
-
-Check the render method of `CheckPointsPage`. See https://react.dev/link/warning-keys for more information. 
-    at <unknown> (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15127:29)
-    at runWithFiberInDEV (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
-    at warnForMissingKey (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15126:17)
-    at warnOnInvalidKey (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4091:21)
-    at reconcileChildrenArray (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4129:160)
-    at reconcileChildFibersImpl (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4236:51)
-    at <unknown> (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4261:39)
-    at reconcileChildren (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:5898:51)
-    at beginWork (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6758:1573)
-    at runWithFiberInDEV (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
-    at performUnitOfWork (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
-    at workLoopSync (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9449:40)
-    at renderRootSync (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9433:13)
-    at performWorkOnRoot (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:186)
-    at performWorkOnRootViaSchedulerTask (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
-    at MessagePort.performWorkUntilDeadline (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15127:29)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
 Twilio credentials are missing. WhatsApp send skipped. {
   to: '07000361710',
-  message: 'You redeemed 500 points successfully.\nRemaining points: 0'
+  message: 'Welcome to DK Enterprises Rewards, Priyam Vashishtha!\n' +
+    'You earned 700 points on your purchase.\n' +
+    'Total points: 1200'
 }
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+Twilio credentials are missing. WhatsApp send skipped. { to: '9998887773', message: 'Hello customers\n' }
+Twilio credentials are missing. WhatsApp send skipped. { to: '07000361710', message: 'Hello customers\n' }
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
 Twilio credentials are missing. WhatsApp send skipped. {
   to: '07000361710',
-  message: 'You redeemed 500 points successfully.\nRemaining points: 0'
+  message: 'Welcome to DK Enterprises Rewards, Priyam Vashishtha!\n' +
+    'You earned 2500 points on your purchase.\n' +
+    'Total points: 3700'
 }
+⨯ ReferenceError: Link is not defined
+    at HomePage (src\app\page.js:18:14)
+  16 |
+  17 |           <div className="hero-actions">
+> 18 |             <Link href="/rewards" className="primary-link">
+     |              ^
+  19 |               Join Rewards Program
+  20 |             </Link>
+  21 |           </div> {
+  digest: '3326011543'
+}
+⨯ ReferenceError: Link is not defined
+    at HomePage (src\app\page.js:18:14)
+  16 |
+  17 |           <div className="hero-actions">
+> 18 |             <Link href="/rewards" className="primary-link">
+     |              ^
+  19 |               Join Rewards Program
+  20 |             </Link>
+  21 |           </div> {
+  digest: '3326011543'
+}
+⨯ ReferenceError: Link is not defined
+    at HomePage (src\app\page.js:18:14)
+  16 |
+  17 |           <div className="hero-actions">
+> 18 |             <Link href="/rewards" className="primary-link">
+     |              ^
+  19 |               Join Rewards Program
+  20 |             </Link>
+  21 |           </div> {
+  digest: '3326011543'
+}
+⨯ ReferenceError: Link is not defined
+    at HomePage (src\app\page.js:18:14)
+  16 |
+  17 |           <div className="hero-actions">
+> 18 |             <Link href="/rewards" className="primary-link">
+     |              ^
+  19 |               Join Rewards Program
+  20 |             </Link>
+  21 |           </div> {
+  digest: '3326011543'
+}
+[browser] Uncaught ReferenceError: Link is not defined
+    at HomePage (src\app\page.js:18:14)
+    at resolveErrorDev (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js:1919:105)
+    at processFullStringRow (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js:2434:29)
+    at processFullBinaryRow (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js:2393:9)
+    at processBinaryChunk (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js:2502:221)
+    at progress (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js:2689:13)
+  16 |
+  17 |           <div className="hero-actions">
+> 18 |             <Link href="/rewards" className="primary-link">
+     |              ^
+  19 |               Join Rewards Program
+  20 |             </Link>
+  21 |           </div>
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)

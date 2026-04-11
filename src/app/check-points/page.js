@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
 
 export default function CheckPointsPage() {
-  const searchParams = useSearchParams();
   const [mobile, setMobile] = useState("");
   const [result, setResult] = useState(null);
   const [status, setStatus] = useState("");
@@ -12,11 +10,15 @@ export default function CheckPointsPage() {
   const [redeemStatus, setRedeemStatus] = useState("");
 
   useEffect(() => {
-    const queryMobile = searchParams.get("mobile");
+    const params = new URLSearchParams(window.location.search);
+    const queryMobile = params.get("mobile");
     if (queryMobile) {
       setMobile(queryMobile);
+      setTimeout(() => {
+        handleCheck();
+      }, 0);
     }
-  }, [searchParams]);
+  }, []);
 
   async function handleCheck(event) {
     event?.preventDefault?.();
@@ -124,8 +126,20 @@ export default function CheckPointsPage() {
                   className="list-row"
                 >
                   <div>
+                    <h5>Model Name</h5>
                     <strong>{purchase.mobileModel}</strong>
+                    <br></br>
+                    <h5>Bill No.</h5>
                     <span>{purchase.invoiceNumber}</span>
+                    <br></br>
+                    <h5>Date & Time</h5>
+                    <span>
+                      {new Intl.DateTimeFormat("en-IN", {
+                        day: "2-digit",
+                        month: "short",
+                        year: "numeric",
+                      }).format(new Date(purchase.purchaseDate))}
+                    </span>
                   </div>
                   <div>
                     <strong>+{purchase.pointsEarned}</strong>

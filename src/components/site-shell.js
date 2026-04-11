@@ -14,7 +14,7 @@ export function SiteShell({ children }) {
       <header className="topbar">
         <Link href="/" className="brand">
           DK Enterprises
-          <span>Retail CRM + Rewards</span>
+          <span>Rewards Points</span>
         </Link>
         <nav className="nav">
           {navItems.map((item) => (

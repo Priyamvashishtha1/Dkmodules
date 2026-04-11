@@ -3,6 +3,14 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
+function getTodayDateInputValue() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
 const initialForm = {
   name: "",
   age: "",
@@ -11,7 +19,7 @@ const initialForm = {
   phoneModel: "",
   purchaseAmount: "",
   invoiceNumber: "",
-  purchaseDate: ""
+  purchaseDate: getTodayDateInputValue()
 };
 
 export default function RewardsPage() {
@@ -53,10 +61,15 @@ export default function RewardsPage() {
       model: data.purchase?.mobileModel || form.phoneModel,
       earnedPoints: data.purchase?.pointsEarned || 0,
       totalPoints: data.wallet.remainingPoints,
-      invoiceNumber: data.purchase?.invoiceNumber || form.invoiceNumber
+      invoiceNumber: data.purchase?.invoiceNumber || form.invoiceNumber,
+      purchaseDate:
+        data.purchase?.purchaseDate || `${form.purchaseDate}T${new Date().toISOString().split("T")[1]}`
     });
 
-    setForm(initialForm);
+    setForm({
+      ...initialForm,
+      purchaseDate: getTodayDateInputValue()
+    });
   }
 
   return (
@@ -155,13 +168,26 @@ export default function RewardsPage() {
 
             <div className="popup-details">
               <p>
-                <strong>Mobile:</strong> {successCard.mobile}
+                <span>Mobile</span>
+                <strong>{successCard.mobile}</strong>
               </p>
               <p>
-                <strong>Model:</strong> {successCard.model}
+                <span>Model</span>
+                <strong>{successCard.model}</strong>
               </p>
               <p>
-                <strong>Invoice:</strong> {successCard.invoiceNumber}
+                <span>Invoice</span>
+                <strong>{successCard.invoiceNumber}</strong>
+              </p>
+              <p>
+                <span>Purchase Time</span>
+                <strong>
+                  {new Intl.DateTimeFormat("en-IN", {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric",
+                  }).format(new Date(successCard.purchaseDate))}
+                </strong>
               </p>
             </div>
 
