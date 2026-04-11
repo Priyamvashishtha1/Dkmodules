@@ -185,3 +185,6 @@
  GET / 200 in 458ms (next.js: 37ms, application-code: 421ms)
  GET /offers 200 in 7.5s (next.js: 6.6s, application-code: 851ms)
  GET / 200 in 137ms (next.js: 15ms, application-code: 123ms)
+✓ Compiled in 180.3s
+✓ Finished writing to filesystem cache in 27.3s
+✓ Finished filesystem cache database compaction in 43s
