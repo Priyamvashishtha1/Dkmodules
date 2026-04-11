@@ -90,3 +90,4 @@ Twilio credentials are missing. WhatsApp send skipped. {
   20 |             </Link>
   21 |           </div>
 [browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://F:/Dk Modules/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)

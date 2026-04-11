@@ -171,3 +171,17 @@
  GET / 200 in 3.9s (next.js: 1945ms, application-code: 1916ms)
  GET /rewards 200 in 1039ms (next.js: 334ms, application-code: 705ms)
  GET / 200 in 138ms (next.js: 10ms, application-code: 128ms)
+✓ Compiled in 6.4s
+ GET /admin 200 in 1320ms (next.js: 977ms, application-code: 343ms)
+ POST /api/admin/login 200 in 5.2s (next.js: 4.2s, application-code: 971ms)
+ GET /admin/dashboard 200 in 909ms (next.js: 346ms, application-code: 563ms)
+ GET / 200 in 3.8s (next.js: 183ms, application-code: 3.6s)
+ GET / 200 in 2.5s (next.js: 80ms, application-code: 2.5s)
+✓ Compiled in 50.1s
+ GET / 200 in 24.9s (next.js: 18.4s, application-code: 6.5s)
+ GET / 200 in 1958ms (next.js: 518ms, application-code: 1440ms)
+ GET / 200 in 787ms (next.js: 69ms, application-code: 717ms)
+ GET / 200 in 785ms (next.js: 332ms, application-code: 453ms)
+ GET / 200 in 458ms (next.js: 37ms, application-code: 421ms)
+ GET /offers 200 in 7.5s (next.js: 6.6s, application-code: 851ms)
+ GET / 200 in 137ms (next.js: 15ms, application-code: 123ms)
